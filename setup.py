@@ -1,11 +1,10 @@
 import setuptools
 
 def setup_for_python36():
-    import setuptools_movandi
-    from setuptools_movandi import parse_requirements
-    import os
-    cwd = os.getcwd()
-    setuptools_movandi.setup()
+    from setuptools_movandi import ppsetuptools
+    from setuptools_movandi.dependency_parser import parse_requirements
+    from setuptools_movandi.version_schemer import version_scheme
+    ppsetuptools.setup()
 
 if setuptools.__version__ >= '61':
     setuptools.setup()
